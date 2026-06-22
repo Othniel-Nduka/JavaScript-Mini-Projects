@@ -23,7 +23,7 @@ let energy = 100;
 let minutes = 45;
 let alertness = 100;
 let totalStats = energy + minutes + alertness;
-console.log(totalStats);
+console.log("Total stats as of the begining of the game is " + totalStats + "\n");
 
 console.log("This game is based on a student going to school in the morning, you have a set of stats and your choices would determing the student's fate.");
 console.log(`Begining stats include: Energy - ${energy}, Minutes - ${minutes}, Alertness - ${alertness}`);
@@ -39,7 +39,6 @@ while (true) {
     let answer1 = Number(prompt("Enter your choice: "));
     if (answer1 > 3) {
         console.log("Invalid Input");
-        continue;
     } else{
         if (answer1 === 1){
             energy += 5;
@@ -247,5 +246,5 @@ while (true) {
     break;
 }
 
-
-console.log("")
+totalStats = energy + minutes + alertness;
+console.log("\nTotal stats as of the end of the game is " + totalStats);
